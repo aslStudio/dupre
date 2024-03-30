@@ -17,12 +17,8 @@ const manifest = fs.readFileSync(
   'utf-8'
 )
 const assets = JSON.parse(manifest)
- 
-server.get('/', (req, res) => {
-    res.send('Main page')
-})
 
-server.get('/account/*', (req, res) => {
+server.get('*', (req, res) => {
   const component = ReactDOMServer.renderToString(React.createElement(App))
   res.render('client', { assets, component })
 })
