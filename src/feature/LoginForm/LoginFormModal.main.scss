@@ -1,0 +1,7 @@
+.login-form-modal {
+    h4 {
+        @include fontSize(h2, (weight: 700));
+
+        text-align: center;
+    }
+}

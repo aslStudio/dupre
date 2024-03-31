@@ -1,7 +1,7 @@
 import * as React from "react";
 import {useContext, useState} from "react";
 
-export type ModalName = 'unavailable' | 'presentation' | 'success-order'
+export type ModalName = 'login-form' | 'presentation' | 'success-order'
 
 type Context = {
     open: (modalName: ModalName) => void

@@ -6,7 +6,7 @@ export type InputProps = {
     value: string | File
     onInput: (newValue: string | File) => void
     placeholder: string
-    type?: 'file' | 'email' | 'text'
+    type?: 'file' | 'email' | 'text' | 'password'
     isError?: boolean
     isTextarea?: boolean
     icon?: string

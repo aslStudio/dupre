@@ -38,7 +38,7 @@ const InputEmailReflect = reflect({
         onInput: orderFormModel.emailUpdated,
         isError: orderFormModel.$isError,
         type: 'email',
-        placeholder: 'E-mail',
+        placeholder: 'Ваш E-mail',
         classes: `${rootClass}__input`
     }
 })

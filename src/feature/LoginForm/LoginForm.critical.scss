@@ -1,0 +1,11 @@
+.login-form {
+    &__input {
+        margin-bottom: toRem(10);
+    }
+
+    @include media-desktop() {
+        &__input {
+            margin-bottom: toRem(12);
+        }
+    }
+}

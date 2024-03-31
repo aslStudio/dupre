@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { providers } from "../shared/utils";
-import {ModalPresentation, ModalSubmitOrder} from "../feature";
+import {LoginFormModal, ModalPresentation, ModalSubmitOrder} from "../feature";
 import {ModalName} from "../shared/utils/providers/ModalProvider";
 
 const modals = [
@@ -12,6 +12,10 @@ const modals = [
     {
         name: 'success-order' as ModalName,
         component: <ModalSubmitOrder />
+    },
+    {
+        name: 'login-form' as ModalName,
+        component: <LoginFormModal />
     }
 ]
 

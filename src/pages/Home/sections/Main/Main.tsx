@@ -14,7 +14,7 @@ export const Main = () => {
         <div className={`${rootClass}__smoke ${rootClass}__smoke--bottom`}/>
         <div className={`${rootClass}__content`}>
             <div className={`${rootClass}__header`}>
-                <ButtonIcon className={`${rootClass}__button`} icon={'account'} onClick={() => {}} />
+                <ButtonIcon tag={'a'} href={'/login'} className={`${rootClass}__button`} icon={'account'} />
                 <ButtonIcon className={`${rootClass}__button`} icon={'download'} onClick={() => open('presentation')} />
             </div>
             <ImageSvg className={`${rootClass}__logo`} src={'logo-surface'} alt={'logo'} />
