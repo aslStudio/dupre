@@ -1,0 +1,66 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: toRem(30);
+    margin-bottom: toRem(30);
+
+    &__title {
+        @include fontSize(h1, (weight: 700));
+        margin-bottom: toRem(8);
+        text-align: center;
+    }
+
+    &__description {
+        @include fontSize(p1);
+        color: $secondary;
+        text-align: center;
+    }
+
+    &__form {
+        width: 100%;
+        margin-top: toRem(12);
+    }
+
+    @include media-tabletLate() {
+        margin-top: toRem(45);
+        margin-bottom: toRem(45);
+
+        &__info,
+        &__form {
+            width: toRem(450);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__title {
+            margin-bottom: toRem(10);
+        }
+
+        &__form {
+            margin-top: toRem(10);
+        }
+    }
+
+    @include media-desktop() {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__title {
+            margin-bottom: toRem(25);
+        }
+
+        &__title,
+        &__description {
+            text-align: left;
+        }
+
+        &__form {
+            margin-top: 0;
+            width: toRem(450);
+        }
+
+        &__info {
+            width: toRem(500);
+        }
+    }
+}

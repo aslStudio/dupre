@@ -1,0 +1,37 @@
+.button {
+    $b: &;
+
+    transition: 0.3s ease;
+    transition-property: background-color;
+
+    &__loader,
+    &__content {
+        transition: 0.3s ease-out;
+        transition-property: opacity;
+    }
+
+    &__loader {
+        opacity: 0;
+    }
+
+    &.is-loading {
+        #{$b}__loader {
+            opacity: 1;
+        }
+
+        #{$b}__content {
+            opacity: 0;
+        }
+    }
+
+    &.is-disabled {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+    @include media-hover-device() {
+        &:hover {
+            background-color: $brandActive;
+        }
+    }
+}

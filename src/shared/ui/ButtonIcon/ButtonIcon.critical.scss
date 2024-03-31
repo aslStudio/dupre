@@ -1,0 +1,32 @@
+.button-icon {
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &--size {
+        &-m {
+            width: toRem(30);
+            height: toRem(30);
+        }
+
+        &-s {
+            width: toRem(20);
+            height: toRem(20);
+        }
+    }
+
+    @include media-desktop() {
+        &--size {
+            &-m {
+                width: toRem(40);
+                height: toRem(40);
+            }
+
+            &-s {
+                width: toRem(30);
+                height: toRem(30);
+            }
+        }
+    }
+}

@@ -1,8 +1,19 @@
-import React from 'react'
- 
+import * as React from 'react'
+import {Route, Routes,} from 'react-router-dom'
+import {navigation} from "../shared/utils";
+import {Home, Login} from "../pages";
+import {WithProviders} from "./WithProviders";
+
 export const App: React.FC = () => (
-    <div>
-        <p>Hello from Client 132123</p>
-        <img src={"./images/2.png"} alt={'123'} />
-    </div>
+    <WithProviders>
+        <Routes>
+            <Route path={navigation.Routes.HOME} element={
+                <Home />
+            } />
+            <Route path={navigation.Routes.LOGIN} element={
+                <Login />
+            } />
+        </Routes>
+    </WithProviders>
+
 )

@@ -1,0 +1,66 @@
+.input {
+    position: relative;
+
+    background: linear-gradient(90deg, #000613 0%, #103a84 21.5%, #698eb5 100%);
+    padding: toRem(2);
+    width: 100%;
+    border-radius: toRem(10);
+    box-sizing: border-box;
+
+    transition: 0.3s ease;
+    transition-property: background;
+
+    &.is-error {
+        background: red;
+    }
+
+    &__value {
+        @include fontSize(p2);
+
+        display: block;
+        width: 100%;
+        background-color: $surface;
+        color: $dark;
+        resize: none;
+        padding: toRem(17) toRem(15);
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        border-radius: toRem(8);
+
+        &::placeholder {
+            color: $secondary;
+        }
+    }
+
+    &__file {
+        @include center();
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    &__file-field {
+        color: $secondary;
+    }
+
+    &__icon {
+        @include center(vertical);
+        width: toRem(25);
+        height: toRem(25);
+        right: toRem(15);
+    }
+
+    @include media-tabletLate() {
+        padding: toRem(3);
+
+        &__value {
+            padding: toRem(18);
+        }
+
+        &__icon {
+            @include center(vertical);
+            right: toRem(18);
+        }
+    }
+}

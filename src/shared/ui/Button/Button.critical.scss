@@ -1,0 +1,30 @@
+.button {
+    position: relative;
+
+    display: flex;
+    box-sizing: border-box;
+    background-color: $brand;
+    color: $surface;
+    border-radius: toRem(10);
+    text-align: center;
+
+    @include fontSize(p1, (weight: 700));
+
+    width: 100%;
+    height: toRem(50);
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        width: 100%;
+    }
+
+    &__loader {
+        @include center();
+        pointer-events: none;
+    }
+
+    @include media-tabletLate() {
+        height: toRem(60);
+    }
+}

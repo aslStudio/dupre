@@ -43,6 +43,13 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.mov$/,
+        loader: "file-loader",
+        options: {
+          name: '/videos/[name].[ext]'
+        }
+      }
     ],
   },
   plugins: [

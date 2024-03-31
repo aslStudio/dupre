@@ -1,0 +1,8 @@
+.modal-presentation {
+    h4 {
+        @include fontSize(h2, (weight: 700));
+
+        text-align: center;
+        margin-bottom: toRem(20);
+    }
+}

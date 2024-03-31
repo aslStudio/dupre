@@ -11,8 +11,7 @@
       "skipLibCheck": true,
       "resolveJsonModule": true,
       "moduleResolution": "Node",
-      "strict": true,
       "strictNullChecks": true,
-      "noImplicitAny": true
+      "noImplicitAny": true,
     }
   }

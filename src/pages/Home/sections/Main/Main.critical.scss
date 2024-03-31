@@ -1,0 +1,140 @@
+.home-main {
+    position: relative;
+    max-width: toRem(1200);
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+
+    &__background {
+        @include center();
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    &__smoke {
+        &--left,
+        &--right {
+            display: none;
+        }
+
+        z-index: 2;
+        filter: blur(13px);
+        background-color: $surface;
+
+        &--bottom {
+            @include center(horizontal);
+            width: calc(100% + 50px);
+            bottom: toRem(-100);
+            height: toRem(150);
+        }
+    }
+
+    &__content {
+        width: 100%;
+        padding: toRem(10) toRem(20) toRem(85);
+        box-sizing: border-box;
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    &__button {
+        &:first-child {
+            margin-left: toRem(10);
+        }
+    }
+
+    &__logo {
+        width: toRem(120);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: toRem(20);
+        display: block;
+    }
+
+    &__title {
+        @include fontSize(h1, (weight: 700));
+
+        display: block;
+        color: $surface;
+        text-align: center;
+        width: toRem(266);
+        margin-top: toRem(25);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include media-tabletLate() {
+        &__content {
+            padding: toRem(20) toRem(20) toRem(93);
+        }
+
+        &__button {
+            &:first-child {
+                margin-left: toRem(15);
+            }
+        }
+
+        &__logo {
+            margin-top: toRem(30);
+        }
+
+        &__title {
+            width: toRem(340);
+            margin-top: toRem(20);
+        }
+    }
+
+    @include media-desktop() {
+        &__content {
+            padding: toRem(30) toRem(60) toRem(210);
+        }
+
+        &__logo {
+            width: toRem(200);
+            margin-top: toRem(35);
+        }
+
+        &__title {
+            width: toRem(800);
+            margin-top: toRem(40);
+        }
+
+        &__smoke {
+            display: block;
+            position: absolute;
+
+            z-index: 2;
+            filter: blur(13px);
+            background-color: $surface;
+
+            &--bottom {
+                @include center(horizontal);
+                width: calc(100% + 50px);
+                bottom: toRem(-100);
+                height: toRem(150);
+            }
+
+            &--left,
+            &--right {
+                height: calc(100% + 50px);
+                width: toRem(150);
+                top: toRem(-30);
+            }
+
+            &--left {
+                left: toRem(-100);
+            }
+
+            &--right {
+                right: toRem(-100);
+            }
+        }
+    }
+}

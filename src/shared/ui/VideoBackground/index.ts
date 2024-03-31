@@ -1,0 +1,1 @@
+export { VideoBackground, type VideoBackgroundProps } from './VideoBackground'

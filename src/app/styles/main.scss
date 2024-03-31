@@ -5,3 +5,7 @@
 @import "helpers/mixins";
 @import "helpers/other";
 @import "helpers/variables";
+
+@import "../../shared/ui/shared.main";
+@import "../../feature/feature.main";
+@import "../../pages/pages.main";

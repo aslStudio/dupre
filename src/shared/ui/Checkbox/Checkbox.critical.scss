@@ -1,0 +1,48 @@
+.checkbox {
+    $b: &;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &__value {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: toRem(25);
+        height: toRem(25);
+        border-radius: toRem(5);
+        border: 2px solid $brand;
+        box-sizing: border-box;
+        background-color: $surface;
+
+        transition: 0.3s ease background-color;
+    }
+
+    &__icon {
+        width: toRem(20);
+        height: toRem(20);
+    }
+
+    &__text {
+        @include fontSize(p2);
+
+        display: block;
+        margin-left: toRem(10);
+    }
+
+    &.is-active {
+        #{$b}__value {
+            background-color: $brand;
+        }
+    }
+
+    @include media-desktop() {
+        &__value {
+            width: toRem(30);
+            height: toRem(30);
+            border-radius: toRem(10);
+        }
+    }
+}

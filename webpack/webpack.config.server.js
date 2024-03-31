@@ -5,7 +5,7 @@ const path = require('path')
 module.exports = {
   name: 'server',
   entry: {
-    server: path.resolve(__dirname, '../server/server.ts'),
+    server: path.resolve(__dirname, '../server/server.tsx'),
   },
   mode: 'production',
   output: {
@@ -13,6 +13,9 @@ module.exports = {
     filename: '[name].js',
   },
   resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '../src/')
+    },
     extensions: ['.ts', '.tsx'],
   },
   externals: [nodeExternals()],

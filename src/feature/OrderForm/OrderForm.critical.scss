@@ -1,0 +1,19 @@
+.order-form {
+    &__input {
+        margin-bottom: toRem(10);
+    }
+
+    &__checkbox {
+        margin-top: toRem(10);
+    }
+
+    @include media-tabletLate() {
+        &__input {
+            margin-bottom: toRem(15);
+        }
+
+        &__checkbox {
+            margin-top: toRem(20);
+        }
+    }
+}

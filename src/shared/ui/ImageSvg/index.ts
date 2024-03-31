@@ -1,0 +1,1 @@
+export { ImageSvg, type ImageSvgProps } from './ImageSvg'

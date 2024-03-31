@@ -1,6 +1,5 @@
-$fontFamily: 'Onest';
+$fontFamily: 'OfficinaSans';
 
-@include newFont('Onest', 'Onest-ExtraBold', 800);
-@include newFont('Onest', 'Onest-Bold', 700);
-@include newFont('Onest', 'Onest-Regular', 400);
+@include newFont('OfficinaSans', 'OfficinaSans-ExtraBold', 800);
+@include newFont('OfficinaSans', 'OfficinaSans-Medium', 500);
 

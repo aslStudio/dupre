@@ -1,0 +1,10 @@
+.button-icon {
+    @include media-hover-device() {
+        transition: 0.3s ease;
+        transition-property: opacity;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

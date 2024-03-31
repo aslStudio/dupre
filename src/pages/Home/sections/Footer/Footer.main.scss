@@ -1,0 +1,149 @@
+.footer {
+    @include fontSize(p3);
+    color: $surfaceAlpha;
+    pointer-events: none;
+    max-width: toRem(1200);
+    margin: 0 auto;
+    overflow: hidden;
+
+    position: relative;
+    width: 100%;
+    padding-top: toRem(110);
+    padding-bottom: toRem(56);
+
+    &__smoke {
+        &--left,
+        &--right {
+            display: none;
+        }
+
+        &--top {
+            @include center(horizontal);
+            top: toRem(-55);
+            height: toRem(110);
+            width: calc(100% + 50px);
+        }
+
+        filter: blur(13px);
+        background-color: $surface;
+        z-index: 3;
+    }
+
+    &__overlay {
+        @include center();
+        width: 100%;
+        height: 100%;
+        background-color: $overlay;
+        z-index: 2;
+    }
+
+    &__background {
+        @include center();
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 4;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: toRem(150);
+        text-align: center;
+
+        img {
+            width: toRem(100);
+            margin-bottom: toRem(10);
+        }
+    }
+
+    &__address {
+        text-align: center;
+        width: toRem(280);
+    }
+
+    &__contacts {
+        p + p {
+            margin-top: toRem(8);
+        }
+    }
+
+    @include media-maxMobileLate() {
+        &__contacts {
+            margin-top: toRem(20);
+            margin-bottom: toRem(20);
+        }
+    }
+
+    @include media-tabletLate() {
+        padding-bottom: toRem(40);
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        &__address {
+            width: toRem(230);
+            text-align: left;
+        }
+
+        &__logo {
+            @include center();
+        }
+    }
+
+    @include media-desktop() {
+        padding-top: toRem(154);
+        padding-bottom: toRem(58);
+
+        &__container {
+            align-items: flex-start;
+        }
+
+        &__contacts {
+            display: flex;
+
+            p + p {
+                margin-top: 0;
+                margin-left: toRem(20);
+            }
+        }
+
+        &__address {
+            width: toRem(380);
+        }
+
+        &__smoke {
+            display: block;
+            position: absolute;
+
+            &--left,
+            &--right {
+                height: calc(100% + 80px);
+                width: toRem(150);
+                top: toRem(-30);
+            }
+
+            &--left {
+                left: toRem(-100);
+            }
+
+            &--right {
+                right: toRem(-100);
+            }
+        }
+    }
+}
