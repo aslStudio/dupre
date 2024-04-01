@@ -1,4 +1,6 @@
 .input {
+    $b: &;
+
     position: relative;
 
     background: linear-gradient(90deg, #000613 0%, #103a84 21.5%, #698eb5 100%);
@@ -42,6 +44,9 @@
 
     &__file-field {
         color: $secondary;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     &__icon {
@@ -49,6 +54,12 @@
         width: toRem(25);
         height: toRem(25);
         right: toRem(15);
+    }
+
+    &.is-icon {
+        #{$b}__value {
+            padding-right: toRem(50);
+        }
     }
 
     @include media-tabletLate() {

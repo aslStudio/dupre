@@ -50,9 +50,14 @@
     }
 
     &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background-color: $surface;
         padding: toRem(20);
         border-radius: toRem(20);
+        width: 100%;
     }
 
     @include media-tabletLate() {

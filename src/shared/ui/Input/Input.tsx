@@ -18,7 +18,7 @@ const rootClass = 'input'
 export const Input = React.memo<InputProps>(({ classes, value, onInput, icon, isTextarea, placeholder, type, isError }) => {
     const [ fileName, setFileName ] = useState('')
 
-    return <div className={`${rootClass} ${isError ? 'is-error' : ''} ${classes ?? ''}`}>
+    return <div className={`${rootClass} ${isError ? 'is-error' : ''} ${icon ? 'is-icon' : ''} ${classes ?? ''}`}>
         {!isTextarea && (
             <>
                 {type === 'file'

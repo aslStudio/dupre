@@ -52,7 +52,8 @@ const InputFileReflect = reflect({
         onInput: orderFormModel.fileUpdated,
         type: 'file',
         placeholder: 'Прикрепить файл',
-        classes: `${rootClass}__input`
+        classes: `${rootClass}__input`,
+        icon: 'clip',
     }
 })
 
