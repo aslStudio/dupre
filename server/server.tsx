@@ -3,14 +3,17 @@ import fs from 'fs'
 import path from 'path'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
+import compression from 'compression'
 import { App } from '../src/app/App'
 import {StaticRouter} from "react-router-dom/server";
- 
+
+// @ts-ignore
 const server = express()
 
 server.set('view engine', 'ejs')
 server.set('views', path.join(__dirname, 'views'))
- 
+server.use(compression())
+
 server.use('/', express.static(path.join(__dirname, 'static')))
  
 const manifest = fs.readFileSync(
@@ -19,6 +22,7 @@ const manifest = fs.readFileSync(
 )
 const assets = JSON.parse(manifest)
 
+// @ts-ignore
 server.get('*', (req, res) => {
   const component = ReactDOMServer.renderToString(
       <StaticRouter location={req.url}>

@@ -1,0 +1,1 @@
+export { WebpImage, type WebpImageProps } from './WebpImage'

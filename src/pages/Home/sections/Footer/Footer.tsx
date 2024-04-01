@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ImageSvg} from "../../../../shared/ui";
+import {ImageSvg, WebpImage} from "../../../../shared/ui";
 
 const rootClass = 'footer'
 
@@ -22,6 +22,6 @@ export const Footer = () => {
         <div className={`${rootClass}__smoke ${rootClass}__smoke--right`}/>
         <div className={`${rootClass}__smoke ${rootClass}__smoke--top`}/>
         <div className={`${rootClass}__overlay`}/>
-        <img className={`${rootClass}__background`} alt={'background'} src={"./images/footer_image.png"} loading={"lazy"}/>
+        <WebpImage classes={`${rootClass}__background`} alt={'background'} imagePath={"footer_image"} exc={"png"} />
     </footer>
 }
