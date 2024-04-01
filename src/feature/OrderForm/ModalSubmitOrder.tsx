@@ -24,7 +24,7 @@ export const ModalSubmitOrder = () => {
 const CaptchaReflect = reflect({
     view: ReCAPTCHA,
     bind: {
-        sitekey: '6LeOjqopAAAAAO8vmw5i4s2KePWlsobGixigUaWE',
+        sitekey: '6LdKPqspAAAAAH_IPiGcuzuWRAWkuR4cDVytrj5y',
         onChange: orderFormModel.capchaSubmitted,
     }
 })
