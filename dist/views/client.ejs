@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React + Node.js App</title>
+    <link rel="preload" href="<%= assets["client.css"] %>" as="style" />
+    <link rel="stylesheet" href="<%= assets["client.css"] %>" />
+  </head>
+  <body>
+    <div id="root"><%- component %></div>
+    <script defer="defer" src="<%= assets["client.js"] %>"></script>
+  </body>
+</html>
