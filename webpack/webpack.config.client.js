@@ -30,7 +30,7 @@ module.exports = {
       {
         test: /\/critical.scss$/i,
         use: [
-            "style-loader",
+            MiniCssExtractPlugin.loader,
             "css-loader",
             "sass-loader",
         ],

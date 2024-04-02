@@ -4,11 +4,12 @@
   "scripts": {
     "build:server": "webpack --config ./webpack/webpack.config.server.js",
     "build:client": "webpack --config ./webpack/webpack.config.client.js",
-    "build": "webpack --config ./webpack/webpack.config.client.js && webpack --config ./webpack/webpack.config.server.js && node ./scripts/image-optimizer.js && node ./scripts/videos.js && node ./scripts/files.js",
+    "build": "webpack --config ./webpack/webpack.config.client.js && webpack --config ./webpack/webpack.config.server.js && node ./scripts/image-optimizer.js && node ./scripts/videos.js && node ./scripts/files.js && node ./scripts/favicon.js",
     "images": "node ./scripts/image-optimizer.js",
     "videos": "node ./scripts/videos.js",
     "files": "node ./scripts/files.js",
-    "assets": "node ./scripts/image-optimizer.js && node ./scripts/videos.js && node ./scripts/files.js",
+    "favicons": "node ./scripts/favicon.js",
+    "assets": "node ./scripts/image-optimizer.js && node ./scripts/videos.js && node ./scripts/files.js && node ./scripts/favicon.js",
     "dev": "webpack --config ./webpack/webpack.config.dev.js",
     "start": "node ./dist/server.js"
   },
@@ -49,6 +50,7 @@
     "effector-react": "^23.2.0",
     "ejs": "^3.1.9",
     "express": "^4.17.1",
+    "favicons": "^7.2.0",
     "fs": "^0.0.1-security",
     "imagemin": "^8.0.1",
     "imagemin-mozjpeg": "^10.0.0",

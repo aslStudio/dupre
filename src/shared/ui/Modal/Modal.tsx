@@ -27,7 +27,7 @@ export const Modal = React.memo<ModalProps>(({ children, classes }) => {
     }, []);
 
     return <div className={`${rootClass} ${classes} ${isOpen ? 'is-open' : ''}`}>
-        <div className={`${rootClass}__overlay`} />
+        <div className={`${rootClass}__overlay`} onClick={onClose} />
         <div className={`${rootClass}__wrapper`}>
             <ButtonIcon className={`${rootClass}__close`} size={'s'} icon={'cross'} onClick={onClose} />
             <div className={`${rootClass}__main`}>
