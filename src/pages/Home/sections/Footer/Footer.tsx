@@ -15,11 +15,8 @@ export const Footer = () => {
                 <p>mf@dupre.cn</p>
                 <p>(+86)18520504319</p>
             </div>
-            <p className={`${rootClass}__address`}>1024, 1st Building, No. 68, Wanbo 4th Road, Nancun Town, Panyu Dc.,
-                Guangzhou city, China</p>
+            <p className={`${rootClass}__address`}>广州市番禺区南村镇万博四路68号1楼1024</p>
         </div>
-        <div className={`${rootClass}__smoke ${rootClass}__smoke--left`}/>
-        <div className={`${rootClass}__smoke ${rootClass}__smoke--right`}/>
         <div className={`${rootClass}__smoke ${rootClass}__smoke--top`}/>
         <div className={`${rootClass}__overlay`}/>
         <WebpImage classes={`${rootClass}__background`} alt={'background'} imagePath={"footer_image"} exc={"png"} />

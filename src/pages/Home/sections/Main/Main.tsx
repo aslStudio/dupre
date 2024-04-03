@@ -8,9 +8,7 @@ export const Main = () => {
     const { open } = providers.modalProvider.useModal()
 
     return <section className={`${rootClass}`}>
-        <div className={`${rootClass}__smoke ${rootClass}__smoke--left`}/>
         <VideoBackground classes={`${rootClass}__background`} video={'main.mov'} preview={'main_preview.png'}/>
-        <div className={`${rootClass}__smoke ${rootClass}__smoke--right`}/>
         <div className={`${rootClass}__smoke ${rootClass}__smoke--bottom`}/>
         <div className={`${rootClass}__content`}>
             <div className={`${rootClass}__header`}>

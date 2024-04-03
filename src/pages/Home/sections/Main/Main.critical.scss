@@ -1,7 +1,5 @@
 .home-main {
     position: relative;
-    max-width: toRem(1200);
-    margin: 0 auto;
     overflow: hidden;
     box-sizing: border-box;
     width: 100%;
@@ -15,11 +13,6 @@
     }
 
     &__smoke {
-        &--left,
-        &--right {
-            display: none;
-        }
-
         z-index: 2;
         filter: blur(13px);
         background-color: $surface;
@@ -33,7 +26,8 @@
     }
 
     &__content {
-        width: 100%;
+        max-width: toRem(1200);
+        margin: 0 auto;
         padding: toRem(10) toRem(20) toRem(120);
         box-sizing: border-box;
     }
@@ -119,21 +113,6 @@
                 width: calc(100% + 50px);
                 bottom: toRem(-100);
                 height: toRem(150);
-            }
-
-            &--left,
-            &--right {
-                height: calc(100% + 50px);
-                width: toRem(150);
-                top: toRem(-30);
-            }
-
-            &--left {
-                left: toRem(-100);
-            }
-
-            &--right {
-                right: toRem(-100);
             }
         }
     }
