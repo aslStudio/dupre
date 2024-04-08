@@ -1,4 +1,6 @@
 .video-background {
+    $b: &;
+
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -15,6 +17,11 @@
         height: 100%;
 
         background-color: $overlay;
-        backdrop-filter: blur(10px);
+    }
+
+    &.is-blur {
+        #{$b}__overlay {
+            backdrop-filter: blur(10px);
+        }
     }
 }
