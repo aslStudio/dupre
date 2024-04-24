@@ -39,12 +39,13 @@ server.get('*', (req, res) => {
 
 server.post('/order', upload.single('file'), (req, res) => {
     const transporter = nodemailer.createTransport({
-        host: 'mail.hosting.reg.ru',
+        host: 'mail.dupre.cn',
         port: 587,
+        secure: false,
         auth: {
             user: "orders@dupre.cn",
             pass: "aM2iW1zF2t"
-        }
+        },
     })
 
     const mailOptions = {
