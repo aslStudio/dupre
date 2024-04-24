@@ -26,7 +26,7 @@ export const OrderForm = React.memo<OrderFormProps>(({ classes }) => {
             Оставить заявку
         </ButtonReflect>
         <CheckboxReflect>
-            Согласен с <Link href={"#"}>политикой обработки персональных данных</Link>
+            Согласен с <Link href={"/files/privacy.pdf"}>политикой обработки персональных данных</Link>
         </CheckboxReflect>
     </div>
 })

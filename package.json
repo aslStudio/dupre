@@ -11,7 +11,8 @@
     "favicons": "node ./scripts/favicon.js",
     "assets": "node ./scripts/image-optimizer.js && node ./scripts/videos.js && node ./scripts/files.js && node ./scripts/favicon.js",
     "dev": "webpack --config ./webpack/webpack.config.dev.js",
-    "start": "node ./dist/server.js"
+    "start": "node ./dist/server.js",
+    "start:pm": "pm2 start ./dist/server.js"
   },
   "devDependencies": {
     "@types/compression": "^1.7.5",
