@@ -39,11 +39,11 @@ server.get('*', (req, res) => {
 
 server.post('/order', upload.single('file'), (req, res) => {
     const transporter = nodemailer.createTransport({
-        port: 465,
-        secure: true,
+        host: 'mail.hosting.reg.ru',
+        port: 587,
         auth: {
-            user: "orders.dupre.cn",
-            pass: "zN2uK6oO3q"
+            user: "orders@dupre.cn",
+            pass: "aM2iW1zF2t"
         }
     })
 
