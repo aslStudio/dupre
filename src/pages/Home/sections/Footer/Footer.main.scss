@@ -96,6 +96,10 @@
             margin-top: toRem(20);
             margin-bottom: toRem(20);
         }
+
+        p {
+            text-align: center;
+        }
     }
 
     @include media-tabletLate() {
