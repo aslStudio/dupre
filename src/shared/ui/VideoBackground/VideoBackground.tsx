@@ -27,7 +27,8 @@ export const VideoBackground = React.memo<VideoBackgroundProps>(({ video, previe
 
     return <div className={`${rootClass} ${isBlur ? 'is-blur' : ''} ${classes ?? ''}`}>
         <div className={`${rootClass}__overlay`} />
-        <video ref={videoRef} className={`${rootClass}__main`} preload={'none'}
+        <img src={`./images/${preview}`} className={`${rootClass}__main mobile`} />
+        <video ref={videoRef} className={`${rootClass}__main tablet`} preload={'none'}
                poster={`./images/${preview}`} loop={true} muted={true}>
             <source src={`./videos/${video}`} type={'video/mp4'}/>
         </video>

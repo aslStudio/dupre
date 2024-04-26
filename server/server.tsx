@@ -50,7 +50,7 @@ server.post('/order', upload.single('file'), (req, res) => {
 
     const mailOptions = {
         from: 'orders@dupre.cn',
-        to: 'orders@dupre.cn',
+        to: 'mf@dupre.cn',
         subject: 'Заявка',
         html: `
             <html lang="ru">
